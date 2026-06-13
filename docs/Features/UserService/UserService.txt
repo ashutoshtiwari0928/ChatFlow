@@ -1,0 +1,11 @@
+title User Service (Happy flow)
+user1->WebService:signup()
+WebService-->user1:returns RegistrationPage
+user1->WebService:POST: register(user1 details)
+
+box over WebService:validates
+box over WebService:registers User1
+WebService-->user1:returns Confirmation Message
+user1->WebService:login(user1 credentials)
+box over WebService:check User1 credentails\n from database and validate
+WebService->user1:return AuthenticationToken
