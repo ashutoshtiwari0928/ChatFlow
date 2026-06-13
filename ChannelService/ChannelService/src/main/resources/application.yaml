@@ -10,6 +10,11 @@ spring:
       ddl-auto: update
 
 
+logging:
+  file:
+    name: logs/application.log
+
+
 server:
   port: 8081
 
